@@ -28,25 +28,20 @@ class Ball:
             self.vel[1] *= -self.elasticity
         if nx+self.r > self.screen_width or nx-self.r <= 0:
             self.vel[0] *= -self.elasticity
-        if abs(self.vel[0]*self.fps) < 4:
-            self.vel[0] = 0
-        if abs(self.vel[1]*self.fps) < 4:
-            self.vel[1] = 0
-        
         #if on the ground and not moving
         if ny+self.r >= self.screen_height and self.vel[1] == 0:
             self.y = self.screen_height-self.r
         #if not on the ground
-        elif not ny+self.r >= self.screen_height and self.vel[1] != 0:
+        if not ny+self.r >= self.screen_height and self.vel[1] != 0:
             self.vel[1] += (self.m/self.gravity)*1/self.fps
-        
+
         self.vel[0] *= self.airDrag
         self.vel[1] *= self.airDrag
-        
+
         # update positions post bouncing, gravity, and friction
         nx = self.x + self.vel[0] #new x position of the ball's center
         ny = self.y + self.vel[1] #new y position of the ball's center
-        
+
         self.x = nx
         self.y = ny
         
