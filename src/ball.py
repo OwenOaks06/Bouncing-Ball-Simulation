@@ -1,7 +1,7 @@
 import pygame
 from math import log
 
-class Ball:
+class BasicBall:
     
     def __init__(self, screen_width, screen_height, x, y, r, speed, color, fps, gravity):
         self.screen_width = screen_width

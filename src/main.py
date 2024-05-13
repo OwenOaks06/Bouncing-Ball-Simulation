@@ -1,6 +1,6 @@
 import pygame, sys
 from pygame.locals import QUIT
-from ball import Ball
+from ball import BasicBall
 
 pygame.init()
 
@@ -21,9 +21,9 @@ TURQUOISE = (64,224,208)
 VIOLET = (143, 0, 255)
 
 ballList = [\
-    Ball(SCREEN_WIDTH, SCREEN_HEIGHT, 250, 50, 30, 100, TURQUOISE, FPS, GRAVITY), \
-    Ball(SCREEN_WIDTH, SCREEN_HEIGHT, 20, 70, 20, 100, TURQUOISE, FPS, GRAVITY), \
-    Ball(SCREEN_WIDTH, SCREEN_HEIGHT, 200, 100, 40, 200, TURQUOISE, FPS, GRAVITY), \
+    BasicBall(SCREEN_WIDTH, SCREEN_HEIGHT, 250, 50, 30, 100, TURQUOISE, FPS, GRAVITY), \
+    BasicBall(SCREEN_WIDTH, SCREEN_HEIGHT, 20, 70, 20, 100, TURQUOISE, FPS, GRAVITY), \
+    BasicBall(SCREEN_WIDTH, SCREEN_HEIGHT, 200, 100, 40, 200, TURQUOISE, FPS, GRAVITY), \
 ]
 
 
